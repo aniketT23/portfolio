@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0f;
+  --foreground: #e0e0e8;
+  --anime-purple: #7b2ff7;
+  --anime-blue: #00d4ff;
+  --anime-orange: #ff6a00;
+  --anime-red: #ff2d55;
+  --anime-gold: #ffd700;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --color-anime-purple: var(--anime-purple);
+  --color-anime-blue: var(--anime-blue);
+  --color-anime-orange: var(--anime-orange);
+  --color-anime-red: var(--anime-red);
+  --color-anime-gold: var(--anime-gold);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Anime shimmer skeleton ── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.animate-shimmer {
+  background: linear-gradient(90deg, rgb(20 10 40 / 0.6) 25%, rgb(60 30 90 / 0.8) 50%, rgb(20 10 40 / 0.6) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* ── Anime glow pulse ── */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgb(123 47 247 / 0.3), 0 0 60px rgb(123 47 247 / 0.1); }
+  50% { box-shadow: 0 0 30px rgb(123 47 247 / 0.6), 0 0 80px rgb(123 47 247 / 0.2); }
+}
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* ── Text glow ── */
+@keyframes text-glow {
+  0%, 100% { text-shadow: 0 0 10px rgb(123 47 247 / 0.5), 0 0 40px rgb(123 47 247 / 0.2); }
+  50% { text-shadow: 0 0 20px rgb(123 47 247 / 0.8), 0 0 60px rgb(123 47 247 / 0.4), 0 0 80px rgb(0 212 255 / 0.2); }
+}
+.animate-text-glow {
+  animation: text-glow 3s ease-in-out infinite;
+}
+
+/* ── Energy aura (Solo Leveling style) ── */
+@keyframes energy-aura {
+  0% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+  100% { opacity: 0.4; transform: scale(1); }
+}
+.animate-energy-aura {
+  animation: energy-aura 4s ease-in-out infinite;
+}
+
+/* ── Speed lines overlay ── */
+.speed-lines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 98px,
+    rgb(123 47 247 / 0.03) 98px,
+    rgb(123 47 247 / 0.03) 100px
+  );
+  pointer-events: none;
+}
+
+/* ── Diagonal slash marks (battle effect) ── */
+.slash-marks {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 200px,
+    rgb(255 106 0 / 0.02) 200px,
+    rgb(255 106 0 / 0.02) 201px
+  );
+  pointer-events: none;
+}
+
+/* ── Anime gradient backgrounds ── */
+.bg-anime-dark {
+  background: linear-gradient(180deg, #0a0a0f 0%, #0d0520 50%, #0a0a0f 100%);
+}
+.bg-anime-dark-alt {
+  background: linear-gradient(180deg, #0d0520 0%, #0a0a1a 50%, #0d0520 100%);
+}
+
+/* ── Neon border glow on hover ── */
+.anime-card {
+  border: 1px solid rgb(123 47 247 / 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.anime-card:hover {
+  border-color: rgb(123 47 247 / 0.6);
+  box-shadow: 0 0 15px rgb(123 47 247 / 0.2), 0 0 30px rgb(123 47 247 / 0.1), inset 0 0 15px rgb(123 47 247 / 0.05);
+}
+
+/* ── Scrollbar styling ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(123 47 247 / 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(123 47 247 / 0.7);
+}
