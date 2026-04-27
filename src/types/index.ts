@@ -5,7 +5,6 @@ export interface NavLink {
 
 export interface Skill {
   name: string;
-  level: number;
   category: "Frontend" | "Backend" | "Languages" | "Database" | "DevOps & Cloud" | "AI" | "Tools";
 }
 
@@ -15,6 +14,7 @@ export interface Project {
   tags: string[];
   liveUrl?: string;
   sourceUrl?: string;
+  jutsu?: "chidori" | "rasengan" | "sharingan" | "amaterasu" | "susanoo" | "sage";
 }
 
 export interface Experience {

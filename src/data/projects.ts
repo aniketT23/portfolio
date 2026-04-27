@@ -6,6 +6,7 @@ export const PROJECTS: Project[] = [
     description:
       "A GPT-4 powered AI Code Reviewer published on the Microsoft Marketplace as an Azure Function. Integrates into repositories to automate and standardize code quality checks across teams.",
     tags: ["GenAI", "GPT-4", "Azure Functions", "C#", ".NET", "DevOps"],
+    jutsu: "chidori",
   },
   {
     title: "Frontend Master Clone",
@@ -14,6 +15,7 @@ export const PROJECTS: Project[] = [
     tags: ["Express.js", "Node.js", "EJS", "MongoDB", "HTML", "CSS"],
     liveUrl: "https://frontendmasterclone.netlify.app/",
     sourceUrl: "https://github.com/aniketT23/FrontEnd-Master-2.0",
+    jutsu: "rasengan",
   },
   {
     title: "Yatra Clone",
@@ -22,5 +24,6 @@ export const PROJECTS: Project[] = [
     tags: ["React", "Express.js", "Node.js", "MongoDB", "HTML", "CSS"],
     liveUrl: "https://yatra.vercel.app/",
     sourceUrl: "https://github.com/aniketT23/Yatra-Clone",
+    jutsu: "sharingan",
   },
 ];
