@@ -152,7 +152,7 @@ export default function About() {
             </motion.div>
 
             <motion.a
-              href="https://drive.google.com/file/d/1fTzJ9jHFIyTbby1V2qk3FpxlWQVUBJI7/view?usp=sharing"
+              href="https://drive.google.com/file/d/1GXvwERDI2HJft8kRQFdO1I8oWY0d01O_/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-[var(--accent)] hover:text-[var(--foreground)] transition-colors duration-200 group mt-8"
