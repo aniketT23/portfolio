@@ -94,14 +94,21 @@ export function ChidoriEffect() {
         </defs>
       </svg>
 
-      {/* Electric spark particles */}
-      {[...Array(6)].map((_, i) => (
+      {/* Electric spark particles — fixed positions to avoid hydration mismatch */}
+      {[
+        { left: 22, top: 18, repeatDelay: 1.1, delay: 0.2 },
+        { left: 55, top: 48, repeatDelay: 1.6, delay: 0.7 },
+        { left: 38, top: 72, repeatDelay: 0.9, delay: 1.3 },
+        { left: 75, top: 35, repeatDelay: 1.8, delay: 0.5 },
+        { left: 63, top: 85, repeatDelay: 1.3, delay: 1.8 },
+        { left: 30, top: 55, repeatDelay: 2.0, delay: 1.0 },
+      ].map((spark, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 rounded-full bg-cyan-300"
           style={{
-            left: `${15 + Math.random() * 70}%`,
-            top: `${10 + Math.random() * 80}%`,
+            left: `${spark.left}%`,
+            top: `${spark.top}%`,
             boxShadow: "0 0 6px 2px rgba(0,212,255,0.8)",
           }}
           animate={{
@@ -111,8 +118,8 @@ export function ChidoriEffect() {
           transition={{
             duration: 0.3,
             repeat: Infinity,
-            repeatDelay: 0.8 + Math.random() * 1.5,
-            delay: Math.random() * 2,
+            repeatDelay: spark.repeatDelay,
+            delay: spark.delay,
           }}
         />
       ))}
